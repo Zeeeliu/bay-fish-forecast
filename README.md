@@ -12,6 +12,18 @@ Tap the alert banner for the details: a Chinese summary, extracted facts, keywor
 
 ![Alert detail](docs/images/alert-detail-zh.png)
 
+## Why I built this
+
+My dad is an avid angler in the SF Bay Area. Planning a trip means checking several places: tide tables, the marine
+forecast, the weather, and the National Weather Service for warnings. Most of it is in English, and the most important
+piece, a Beach Hazards Statement or High Surf Warning about sneaker waves and rip currents, is the easiest to miss.
+
+So I built him one screen. It sits at home where he can glance at it the night before or the morning of a trip. Official
+alerts come first, in Chinese, followed by the tide, wind, waves and water temperature for the spots he fishes. It never
+says "safe". It shows what the NWS has issued and when it last checked, and the call stays with him.
+
+If someone in your life fishes the Bay, I hope it helps them plan safely too.
+
 ## Features
 
 - **Official alerts first.** Beach Hazards Statements, High Surf, Small Craft, Gale, Coastal Flood, Tsunami… from the NWS API,
