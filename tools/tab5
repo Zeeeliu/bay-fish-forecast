@@ -1,0 +1,3 @@
+#!/bin/sh
+# Run tools/serial.py with the PlatformIO venv python (has pyserial).
+exec "$HOME/.pio-venv/bin/python" -I "$(dirname "$0")/serial.py" "$@"

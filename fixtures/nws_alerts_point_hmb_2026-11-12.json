@@ -1,0 +1,284 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.002.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.002.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.002.2",
+                "areaDesc": "Coastal North Bay Including Point Reyes National Seashore; San Francisco Peninsula Coast; Northern Monterey Bay",
+                "geocode": {
+                    "SAME": [
+                        "006041",
+                        "006097",
+                        "006081",
+                        "006087"
+                    ],
+                    "UGC": [
+                        "CAZ505",
+                        "CAZ509",
+                        "CAZ529"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ505",
+                    "https://api.weather.gov/zones/forecast/CAZ509",
+                    "https://api.weather.gov/zones/forecast/CAZ529"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-11-11T18:09:00-08:00"
+                    }
+                ],
+                "sent": "2026-11-11T22:48:00-08:00",
+                "effective": "2026-11-11T22:48:00-08:00",
+                "onset": "2026-11-13T18:00:00-08:00",
+                "expires": "2026-11-12T15:00:00-08:00",
+                "ends": "2026-11-15T04:00:00-08:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "High Surf Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Francisco CA",
+                "headline": "High Surf Warning issued November 11 at 10:48PM PST until November 15 at 4:00AM PST by NWS San Francisco CA",
+                "description": "* WHAT...For the Beach Hazards Statement, An increased risk for\nsneaker waves and strong rip currents with breaking waves of 15\nto 20 ft expected. For the High Surf Warning, Dangerously large\nbreaking waves of 25 to 35 ft, with occasional sets of 40 to 50\nft at favored breakpoints. For the Coastal Flood Advisory, large\nbreaking waves will run up beaches and crash over seawalls,\ninundating adjacent, low-lying infrastructure.\n\n* WHERE...Coastal North Bay Including Point Reyes National\nSeashore, San Francisco Peninsula Coast and Northern Monterey\nBay.\n\n* WHEN...For the Beach Hazards Statement, through Friday\nafternoon. For the High Surf Warning, from 6 PM Friday to 4 AM\nPST Sunday. For the Coastal Flood Advisory, from midnight\nFriday night to 6 PM PST Saturday.\n\n* IMPACTS...High tides will result in flooding of low-lying\ninfrastructure, isolated road closures, and coastal erosion.\nRising tides will bring water and waves farther up the beach\nthan normal, restricting escape from beaches and coastal\nareas. Dangerously large breaking waves can overpower\nswimmers, pulling people into the sea from beaches, jetties,\nand rocks resulting in significant physical injury and\nincreasing the risk of drowning. Waves can sweep across the\nshoreline without warning, pulling people into the sea from\nbeaches, jetties, and rocks.\n\n* ADDITIONAL DETAILS...The Coastal Flood Advisory on Saturday is\nspecifically for the Pacific Coast, where large breaking waves\nwill spill over sea walls and run up beaches onto adjacent\ninfrastructure.",
+                "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.\n\nEveryone should remain out of the water due to life-threatening\nsurf conditions. Stay off of jetties, piers, and other waterside\ninfrastructure.\n\nStay off of jetties, piers, rocks, and other waterside\ninfrastructure. Remain out of the water to avoid hazardous surf\nand NEVER turn your back on the ocean. Monitor local weather,\nsurf and tide forecasts at www.weather.gov/mtr.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "CFWMTR"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS46 KMTR 120648"
+                    ],
+                    "NWSheadline": [
+                        "BEACH HAZARDS STATEMENT REMAINS IN EFFECT THROUGH FRIDAY AFTERNOON... ...HIGH SURF WARNING REMAINS IN EFFECT FROM 6 PM FRIDAY TO 4 AM PST SUNDAY... ...COASTAL FLOOD ADVISORY IN EFFECT FROM MIDNIGHT FRIDAY NIGHT TO 6 PM PST SATURDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KMTR.SU.W.0001.261114T0200Z-261115T1200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-11-15T04:00:00-08:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4b5be439c18dd1d2d8f62b3a64cbb95f0f6a1b66.002.1,2026-11-11T08:08:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3b178227abcba8935da903554eef89daded876da.002.2,2026-11-11T10:17:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.750f043d2e3232d94baf2bf959b68cf64bfe15dd.002.1,2026-11-11T00:14:00-08:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "SUW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.002.1",
+                "areaDesc": "Coastal North Bay Including Point Reyes National Seashore; San Francisco Peninsula Coast; Northern Monterey Bay",
+                "geocode": {
+                    "SAME": [
+                        "006041",
+                        "006097",
+                        "006081",
+                        "006087"
+                    ],
+                    "UGC": [
+                        "CAZ505",
+                        "CAZ509",
+                        "CAZ529"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ505",
+                    "https://api.weather.gov/zones/forecast/CAZ509",
+                    "https://api.weather.gov/zones/forecast/CAZ529"
+                ],
+                "references": [],
+                "sent": "2026-11-11T22:48:00-08:00",
+                "effective": "2026-11-11T22:48:00-08:00",
+                "onset": "2026-11-14T00:00:00-08:00",
+                "expires": "2026-11-12T15:00:00-08:00",
+                "ends": "2026-11-14T18:00:00-08:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Minor",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Coastal Flood Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Francisco CA",
+                "headline": "Coastal Flood Advisory issued November 11 at 10:48PM PST until November 14 at 6:00PM PST by NWS San Francisco CA",
+                "description": "* WHAT...For the Beach Hazards Statement, An increased risk for\nsneaker waves and strong rip currents with breaking waves of 15\nto 20 ft expected. For the High Surf Warning, Dangerously large\nbreaking waves of 25 to 35 ft, with occasional sets of 40 to 50\nft at favored breakpoints. For the Coastal Flood Advisory, large\nbreaking waves will run up beaches and crash over seawalls,\ninundating adjacent, low-lying infrastructure.\n\n* WHERE...Coastal North Bay Including Point Reyes National\nSeashore, San Francisco Peninsula Coast and Northern Monterey\nBay.\n\n* WHEN...For the Beach Hazards Statement, through Friday\nafternoon. For the High Surf Warning, from 6 PM Friday to 4 AM\nPST Sunday. For the Coastal Flood Advisory, from midnight\nFriday night to 6 PM PST Saturday.\n\n* IMPACTS...High tides will result in flooding of low-lying\ninfrastructure, isolated road closures, and coastal erosion.\nRising tides will bring water and waves farther up the beach\nthan normal, restricting escape from beaches and coastal\nareas. Dangerously large breaking waves can overpower\nswimmers, pulling people into the sea from beaches, jetties,\nand rocks resulting in significant physical injury and\nincreasing the risk of drowning. Waves can sweep across the\nshoreline without warning, pulling people into the sea from\nbeaches, jetties, and rocks.\n\n* ADDITIONAL DETAILS...The Coastal Flood Advisory on Saturday is\nspecifically for the Pacific Coast, where large breaking waves\nwill spill over sea walls and run up beaches onto adjacent\ninfrastructure.",
+                "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.\n\nEveryone should remain out of the water due to life-threatening\nsurf conditions. Stay off of jetties, piers, and other waterside\ninfrastructure.\n\nStay off of jetties, piers, rocks, and other waterside\ninfrastructure. Remain out of the water to avoid hazardous surf\nand NEVER turn your back on the ocean. Monitor local weather,\nsurf and tide forecasts at www.weather.gov/mtr.",
+                "response": "Monitor",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "CFWMTR"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS46 KMTR 120648"
+                    ],
+                    "NWSheadline": [
+                        "BEACH HAZARDS STATEMENT REMAINS IN EFFECT THROUGH FRIDAY AFTERNOON... ...HIGH SURF WARNING REMAINS IN EFFECT FROM 6 PM FRIDAY TO 4 AM PST SUNDAY... ...COASTAL FLOOD ADVISORY IN EFFECT FROM MIDNIGHT FRIDAY NIGHT TO 6 PM PST SATURDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KMTR.CF.Y.0016.261114T0800Z-261115T0200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-11-14T18:00:00-08:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "CFY"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.002.3",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.002.3",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.002.3",
+                "areaDesc": "Coastal North Bay Including Point Reyes National Seashore; San Francisco Peninsula Coast; Northern Monterey Bay",
+                "geocode": {
+                    "SAME": [
+                        "006041",
+                        "006097",
+                        "006081",
+                        "006087"
+                    ],
+                    "UGC": [
+                        "CAZ505",
+                        "CAZ509",
+                        "CAZ529"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ505",
+                    "https://api.weather.gov/zones/forecast/CAZ509",
+                    "https://api.weather.gov/zones/forecast/CAZ529"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.002.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.002.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-11-11T18:09:00-08:00"
+                    }
+                ],
+                "sent": "2026-11-11T22:48:00-08:00",
+                "effective": "2026-11-11T22:48:00-08:00",
+                "onset": "2026-11-11T22:48:00-08:00",
+                "expires": "2026-11-12T15:00:00-08:00",
+                "ends": "2026-11-13T18:00:00-08:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Beach Hazards Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Francisco CA",
+                "headline": "Beach Hazards Statement issued November 11 at 10:48PM PST until November 13 at 6:00PM PST by NWS San Francisco CA",
+                "description": "* WHAT...For the Beach Hazards Statement, An increased risk for\nsneaker waves and strong rip currents with breaking waves of 15\nto 20 ft expected. For the High Surf Warning, Dangerously large\nbreaking waves of 25 to 35 ft, with occasional sets of 40 to 50\nft at favored breakpoints. For the Coastal Flood Advisory, large\nbreaking waves will run up beaches and crash over seawalls,\ninundating adjacent, low-lying infrastructure.\n\n* WHERE...Coastal North Bay Including Point Reyes National\nSeashore, San Francisco Peninsula Coast and Northern Monterey\nBay.\n\n* WHEN...For the Beach Hazards Statement, through Friday\nafternoon. For the High Surf Warning, from 6 PM Friday to 4 AM\nPST Sunday. For the Coastal Flood Advisory, from midnight\nFriday night to 6 PM PST Saturday.\n\n* IMPACTS...High tides will result in flooding of low-lying\ninfrastructure, isolated road closures, and coastal erosion.\nRising tides will bring water and waves farther up the beach\nthan normal, restricting escape from beaches and coastal\nareas. Dangerously large breaking waves can overpower\nswimmers, pulling people into the sea from beaches, jetties,\nand rocks resulting in significant physical injury and\nincreasing the risk of drowning. Waves can sweep across the\nshoreline without warning, pulling people into the sea from\nbeaches, jetties, and rocks.\n\n* ADDITIONAL DETAILS...The Coastal Flood Advisory on Saturday is\nspecifically for the Pacific Coast, where large breaking waves\nwill spill over sea walls and run up beaches onto adjacent\ninfrastructure.",
+                "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.\n\nEveryone should remain out of the water due to life-threatening\nsurf conditions. Stay off of jetties, piers, and other waterside\ninfrastructure.\n\nStay off of jetties, piers, rocks, and other waterside\ninfrastructure. Remain out of the water to avoid hazardous surf\nand NEVER turn your back on the ocean. Monitor local weather,\nsurf and tide forecasts at www.weather.gov/mtr.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "CFWMTR"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS46 KMTR 120648"
+                    ],
+                    "NWSheadline": [
+                        "BEACH HAZARDS STATEMENT REMAINS IN EFFECT THROUGH FRIDAY AFTERNOON... ...HIGH SURF WARNING REMAINS IN EFFECT FROM 6 PM FRIDAY TO 4 AM PST SUNDAY... ...COASTAL FLOOD ADVISORY IN EFFECT FROM MIDNIGHT FRIDAY NIGHT TO 6 PM PST SATURDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KMTR.BH.S.0024.000000T0000Z-261114T0200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-11-13T18:00:00-08:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4b5be439c18dd1d2d8f62b3a64cbb95f0f6a1b66.002.2,2026-11-11T08:08:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3b178227abcba8935da903554eef89daded876da.002.1,2026-11-11T10:17:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.750f043d2e3232d94baf2bf959b68cf64bfe15dd.002.2,2026-11-11T00:14:00-08:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "BHS"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories for 37.4636 N, 122.4286 W",
+    "updated": "2026-11-12T08:25:08+00:00"
+}

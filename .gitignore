@@ -1,0 +1,8 @@
+.pio/
+include/secrets.h
+data/fonts/*.vlw
+.DS_Store
+__pycache__/
+tools/fonts-src/
+shots/
+data/cache/

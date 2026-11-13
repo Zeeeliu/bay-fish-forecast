@@ -1,0 +1,13 @@
+Station 46012
+37° 21.3' N  122° 52.9' W
+
+11:00 pm PST 11/11/26
+0700 GMT 11/12/26
+Wind: SE (140°), 3.9 kt
+Gust: 7.8 kt
+Seas: 6.6 ft
+Peak Period: 12 sec
+Pres: 29.93 falling
+Air Temp: 64.6 °F
+Water Temp: 66.0 °F
+Dew Point: 61.2 °F

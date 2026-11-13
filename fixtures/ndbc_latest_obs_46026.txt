@@ -1,0 +1,19 @@
+Station 46026
+37° 45.0' N  122° 50.3' W
+
+11:00 pm PST 11/11/26
+0700 GMT 11/12/26
+Wind: ESE (120°), 5.8 kt
+Gust: 7.8 kt
+Pres: 29.91 falling
+Water Temp: 65.8 °F
+
+Wave Summary
+10:40 pm PST 11/11/26
+0600 GMT 11/12/26
+Swell: 6.9 ft
+Period: 12.9 sec
+Direction: WNW
+Wind Wave: 0.7 ft
+Period: 3.8 sec
+Direction: W

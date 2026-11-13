@@ -1,0 +1,361 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.4",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.4",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.4",
+                "areaDesc": "San Francisco; Southern Monterey Bay and Big Sur Coast",
+                "geocode": {
+                    "SAME": [
+                        "006075",
+                        "006053"
+                    ],
+                    "UGC": [
+                        "CAZ006",
+                        "CAZ530"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ006",
+                    "https://api.weather.gov/zones/forecast/CAZ530"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.3",
+                        "identifier": "urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.3",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-11-11T18:09:00-08:00"
+                    }
+                ],
+                "sent": "2026-11-11T22:48:00-08:00",
+                "effective": "2026-11-11T22:48:00-08:00",
+                "onset": "2026-11-11T22:48:00-08:00",
+                "expires": "2026-11-12T15:00:00-08:00",
+                "ends": "2026-11-13T18:00:00-08:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Beach Hazards Statement",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Francisco CA",
+                "headline": "Beach Hazards Statement issued November 11 at 10:48PM PST until November 13 at 6:00PM PST by NWS San Francisco CA",
+                "description": "* WHAT...For the first Coastal Flood Advisory, Up to 1.5 ft of\ninundation above ground level is possible in low-lying areas\nnear shorelines and tidal waterways. For the Beach Hazards\nStatement, An increased risk for sneaker waves and strong rip\ncurrents with breaking waves of 15 to 20 ft expected. For the\nHigh Surf Warning, Dangerously large breaking waves of 25 to 35\nft, with occasional sets of 40 to 50 ft at favored breakpoints.\nFor the second Coastal Flood Advisory, large breaking waves will\nrun up beaches and crash over seawalls, inundating adjacent,\nlow-lying infrastructure.\n\n* WHERE...San Francisco and Southern Monterey Bay and Big Sur\nCoast.\n\n* WHEN...For the first Coastal Flood Advisory, until 4 PM PST\nFriday. For the Beach Hazards Statement, through Friday\nafternoon. For the High Surf Warning, from 6 PM Friday to 4 AM\nPST Sunday. For the second Coastal Flood Advisory, from\nmidnight Friday night to 6 PM PST Saturday.\n\n* IMPACTS...High tides will result in flooding of low-lying\ninfrastructure, isolated road closures, and coastal erosion.\nRising tides will bring water and waves farther up the beach\nthan normal, restricting escape from beaches and coastal\nareas. Dangerously large breaking waves can overpower\nswimmers, pulling people into the sea from beaches, jetties,\nand rocks resulting in significant physical injury and\nincreasing the risk of drowning. Waves can sweep across the\nshoreline without warning, pulling people into the sea from\nbeaches, jetties, and rocks.\n\n* ADDITIONAL DETAILS...At the San Francisco tide gauge, high tide\nis expected to be: 1.3 ft above normal (7.1 ft MLLW) at 12:10 PM\nThursday 11/12, 1.5 ft above normal (7.3 ft MLLW) at 12:49 PM\nFriday 11/13. These predictions include up to 1.8 ft of surge\nthat will enhance the astronomical tide and flooding threat.\nHigh tide varies up to 90 minutes earlier or later along the\nPacific Coast and through the San Francisco Bay, respectively.\nThe Coastal Flood Advisory on Saturday is specifically for the\nPacific Coast, where large breaking waves will spill over sea\nwalls and run up beaches onto adjacent infrastructure.",
+                "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.\n\nEveryone should remain out of the water due to life-threatening\nsurf conditions. Stay off of jetties, piers, and other waterside\ninfrastructure.\n\nStay off of jetties, piers, rocks, and other waterside\ninfrastructure. Remain out of the water to avoid hazardous surf\nand NEVER turn your back on the ocean. Monitor local weather,\nsurf and tide forecasts at www.weather.gov/mtr.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "CFWMTR"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS46 KMTR 120648"
+                    ],
+                    "NWSheadline": [
+                        "COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 4 PM PST FRIDAY... ...BEACH HAZARDS STATEMENT REMAINS IN EFFECT THROUGH FRIDAY AFTERNOON... ...HIGH SURF WARNING REMAINS IN EFFECT FROM 6 PM FRIDAY TO 4 AM PST SUNDAY... ...COASTAL FLOOD ADVISORY IN EFFECT FROM MIDNIGHT FRIDAY NIGHT TO 6 PM PST SATURDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KMTR.BH.S.0024.000000T0000Z-261114T0200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-11-13T18:00:00-08:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4b5be439c18dd1d2d8f62b3a64cbb95f0f6a1b66.001.3,2026-11-11T08:08:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3b178227abcba8935da903554eef89daded876da.001.1,2026-11-11T10:17:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.750f043d2e3232d94baf2bf959b68cf64bfe15dd.001.2,2026-11-11T00:14:00-08:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "BHS"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.3",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.3",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.3",
+                "areaDesc": "San Francisco; Southern Monterey Bay and Big Sur Coast",
+                "geocode": {
+                    "SAME": [
+                        "006075",
+                        "006053"
+                    ],
+                    "UGC": [
+                        "CAZ006",
+                        "CAZ530"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ006",
+                    "https://api.weather.gov/zones/forecast/CAZ530"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-11-11T18:09:00-08:00"
+                    }
+                ],
+                "sent": "2026-11-11T22:48:00-08:00",
+                "effective": "2026-11-11T22:48:00-08:00",
+                "onset": "2026-11-11T22:48:00-08:00",
+                "expires": "2026-11-12T15:00:00-08:00",
+                "ends": "2026-11-13T16:00:00-08:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Minor",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Coastal Flood Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Francisco CA",
+                "headline": "Coastal Flood Advisory issued November 11 at 10:48PM PST until November 13 at 4:00PM PST by NWS San Francisco CA",
+                "description": "* WHAT...For the first Coastal Flood Advisory, Up to 1.5 ft of\ninundation above ground level is possible in low-lying areas\nnear shorelines and tidal waterways. For the Beach Hazards\nStatement, An increased risk for sneaker waves and strong rip\ncurrents with breaking waves of 15 to 20 ft expected. For the\nHigh Surf Warning, Dangerously large breaking waves of 25 to 35\nft, with occasional sets of 40 to 50 ft at favored breakpoints.\nFor the second Coastal Flood Advisory, large breaking waves will\nrun up beaches and crash over seawalls, inundating adjacent,\nlow-lying infrastructure.\n\n* WHERE...San Francisco and Southern Monterey Bay and Big Sur\nCoast.\n\n* WHEN...For the first Coastal Flood Advisory, until 4 PM PST\nFriday. For the Beach Hazards Statement, through Friday\nafternoon. For the High Surf Warning, from 6 PM Friday to 4 AM\nPST Sunday. For the second Coastal Flood Advisory, from\nmidnight Friday night to 6 PM PST Saturday.\n\n* IMPACTS...High tides will result in flooding of low-lying\ninfrastructure, isolated road closures, and coastal erosion.\nRising tides will bring water and waves farther up the beach\nthan normal, restricting escape from beaches and coastal\nareas. Dangerously large breaking waves can overpower\nswimmers, pulling people into the sea from beaches, jetties,\nand rocks resulting in significant physical injury and\nincreasing the risk of drowning. Waves can sweep across the\nshoreline without warning, pulling people into the sea from\nbeaches, jetties, and rocks.\n\n* ADDITIONAL DETAILS...At the San Francisco tide gauge, high tide\nis expected to be: 1.3 ft above normal (7.1 ft MLLW) at 12:10 PM\nThursday 11/12, 1.5 ft above normal (7.3 ft MLLW) at 12:49 PM\nFriday 11/13. These predictions include up to 1.8 ft of surge\nthat will enhance the astronomical tide and flooding threat.\nHigh tide varies up to 90 minutes earlier or later along the\nPacific Coast and through the San Francisco Bay, respectively.\nThe Coastal Flood Advisory on Saturday is specifically for the\nPacific Coast, where large breaking waves will spill over sea\nwalls and run up beaches onto adjacent infrastructure.",
+                "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.\n\nEveryone should remain out of the water due to life-threatening\nsurf conditions. Stay off of jetties, piers, and other waterside\ninfrastructure.\n\nStay off of jetties, piers, rocks, and other waterside\ninfrastructure. Remain out of the water to avoid hazardous surf\nand NEVER turn your back on the ocean. Monitor local weather,\nsurf and tide forecasts at www.weather.gov/mtr.",
+                "response": "Monitor",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "CFWMTR"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS46 KMTR 120648"
+                    ],
+                    "NWSheadline": [
+                        "COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 4 PM PST FRIDAY... ...BEACH HAZARDS STATEMENT REMAINS IN EFFECT THROUGH FRIDAY AFTERNOON... ...HIGH SURF WARNING REMAINS IN EFFECT FROM 6 PM FRIDAY TO 4 AM PST SUNDAY... ...COASTAL FLOOD ADVISORY IN EFFECT FROM MIDNIGHT FRIDAY NIGHT TO 6 PM PST SATURDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KMTR.CF.Y.0015.000000T0000Z-261114T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-11-13T16:00:00-08:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4b5be439c18dd1d2d8f62b3a64cbb95f0f6a1b66.001.2,2026-11-11T08:08:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3b178227abcba8935da903554eef89daded876da.001.3,2026-11-11T10:17:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.63a06783ef18cc805f1d31a27afcb6fd026b5b07.003.1,2026-11-10T12:11:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.63a06783ef18cc805f1d31a27afcb6fd026b5b07.002.1,2026-11-10T12:11:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.750f043d2e3232d94baf2bf959b68cf64bfe15dd.001.3,2026-11-11T00:14:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a18da11f78713cf023510e336355a780981e2364.002.1,2026-11-10T11:15:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a18da11f78713cf023510e336355a780981e2364.001.1,2026-11-10T11:15:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.863a5bb8f453b4254cd1f62100528b3c170da4b2.002.1,2026-11-10T00:19:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.863a5bb8f453b4254cd1f62100528b3c170da4b2.001.1,2026-11-10T00:19:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.70965ab233bc0c973bf4ccc95a4608d846df76ef.002.2,2026-11-09T21:49:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.70965ab233bc0c973bf4ccc95a4608d846df76ef.001.2,2026-11-09T21:49:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.62177873ab9e8b6fc2a0fae9012e002ad14c1131.002.1,2026-11-09T20:12:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.62177873ab9e8b6fc2a0fae9012e002ad14c1131.001.1,2026-11-09T20:12:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.389d5c2ae072b376512809abac60c71e0da2d540.002.1,2026-11-09T12:13:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.389d5c2ae072b376512809abac60c71e0da2d540.001.1,2026-11-09T12:13:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e889d33d961907c9df3e0d80f5b6e6f6be76d07d.002.1,2026-11-08T19:50:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e889d33d961907c9df3e0d80f5b6e6f6be76d07d.001.1,2026-11-08T19:50:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ba36ac2bca153a2684f01dfe039d537b5725774d.002.1,2026-11-08T12:05:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ba36ac2bca153a2684f01dfe039d537b5725774d.001.1,2026-11-08T12:05:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3c58a388809168e237c34f6a15a488a1f392ab8a.002.1,2026-11-07T20:09:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3c58a388809168e237c34f6a15a488a1f392ab8a.001.1,2026-11-07T20:09:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7562da39f5aecf504ec03b974e8a5b5eb304fbca.002.1,2026-11-07T11:38:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7562da39f5aecf504ec03b974e8a5b5eb304fbca.001.1,2026-11-07T11:38:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c3b4e300188941abc31debb51d09228cb7d2f9e3.002.1,2026-11-06T18:31:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c3b4e300188941abc31debb51d09228cb7d2f9e3.001.1,2026-11-06T18:31:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0c744f26c6c8069909441f74be41128ad917d4f5.002.1,2026-11-06T10:08:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0c744f26c6c8069909441f74be41128ad917d4f5.001.1,2026-11-06T10:08:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6b273a50aad1cecc4612ca25c0bb22cfade11350.002.1,2026-11-05T11:25:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6b273a50aad1cecc4612ca25c0bb22cfade11350.001.1,2026-11-05T11:25:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f3a7c5f2bb67edb2c1297fd1fc94d8b57e2af0c5.003.1,2026-11-05T02:05:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f3a7c5f2bb67edb2c1297fd1fc94d8b57e2af0c5.002.1,2026-11-05T02:05:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.63e7614461c237744485de0a817d2d1afa2bd8cb.002.1,2026-11-05T00:41:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.63e7614461c237744485de0a817d2d1afa2bd8cb.001.1,2026-11-05T00:41:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f27bbf06d1dcce652c52c1ca786490511d334c5c.002.1,2026-11-05T00:43:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f27bbf06d1dcce652c52c1ca786490511d334c5c.001.1,2026-11-05T00:43:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.54c8c85dc80a3544394231e7fc39829a8dc53d21.002.1,2026-11-04T17:48:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.54c8c85dc80a3544394231e7fc39829a8dc53d21.001.1,2026-11-04T17:48:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f363aa7e0b294fd91347802480c69b9a91f1035b.002.1,2026-11-04T10:05:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f363aa7e0b294fd91347802480c69b9a91f1035b.001.1,2026-11-04T10:05:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.14e0032f56192abc92e3a30dd780fd6c1d03496b.002.2,2026-11-04T00:33:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.14e0032f56192abc92e3a30dd780fd6c1d03496b.001.2,2026-11-04T00:33:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.074aba57a1be2427d3c5e8a62f7bf8116dc8ddd8.001.2,2026-11-03T19:51:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9f4618937fa09e3f130bac1fce97026e8c1fb0e9.001.1,2026-11-03T11:25:00-08:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "CFY"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.2",
+                "areaDesc": "San Francisco; Southern Monterey Bay and Big Sur Coast",
+                "geocode": {
+                    "SAME": [
+                        "006075",
+                        "006053"
+                    ],
+                    "UGC": [
+                        "CAZ006",
+                        "CAZ530"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ006",
+                    "https://api.weather.gov/zones/forecast/CAZ530"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.dcd2d95d071b65ff14157dcba880a1162d3288fc.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-11-11T18:09:00-08:00"
+                    }
+                ],
+                "sent": "2026-11-11T22:48:00-08:00",
+                "effective": "2026-11-11T22:48:00-08:00",
+                "onset": "2026-11-13T18:00:00-08:00",
+                "expires": "2026-11-12T15:00:00-08:00",
+                "ends": "2026-11-15T04:00:00-08:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Moderate",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "High Surf Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Francisco CA",
+                "headline": "High Surf Warning issued November 11 at 10:48PM PST until November 15 at 4:00AM PST by NWS San Francisco CA",
+                "description": "* WHAT...For the first Coastal Flood Advisory, Up to 1.5 ft of\ninundation above ground level is possible in low-lying areas\nnear shorelines and tidal waterways. For the Beach Hazards\nStatement, An increased risk for sneaker waves and strong rip\ncurrents with breaking waves of 15 to 20 ft expected. For the\nHigh Surf Warning, Dangerously large breaking waves of 25 to 35\nft, with occasional sets of 40 to 50 ft at favored breakpoints.\nFor the second Coastal Flood Advisory, large breaking waves will\nrun up beaches and crash over seawalls, inundating adjacent,\nlow-lying infrastructure.\n\n* WHERE...San Francisco and Southern Monterey Bay and Big Sur\nCoast.\n\n* WHEN...For the first Coastal Flood Advisory, until 4 PM PST\nFriday. For the Beach Hazards Statement, through Friday\nafternoon. For the High Surf Warning, from 6 PM Friday to 4 AM\nPST Sunday. For the second Coastal Flood Advisory, from\nmidnight Friday night to 6 PM PST Saturday.\n\n* IMPACTS...High tides will result in flooding of low-lying\ninfrastructure, isolated road closures, and coastal erosion.\nRising tides will bring water and waves farther up the beach\nthan normal, restricting escape from beaches and coastal\nareas. Dangerously large breaking waves can overpower\nswimmers, pulling people into the sea from beaches, jetties,\nand rocks resulting in significant physical injury and\nincreasing the risk of drowning. Waves can sweep across the\nshoreline without warning, pulling people into the sea from\nbeaches, jetties, and rocks.\n\n* ADDITIONAL DETAILS...At the San Francisco tide gauge, high tide\nis expected to be: 1.3 ft above normal (7.1 ft MLLW) at 12:10 PM\nThursday 11/12, 1.5 ft above normal (7.3 ft MLLW) at 12:49 PM\nFriday 11/13. These predictions include up to 1.8 ft of surge\nthat will enhance the astronomical tide and flooding threat.\nHigh tide varies up to 90 minutes earlier or later along the\nPacific Coast and through the San Francisco Bay, respectively.\nThe Coastal Flood Advisory on Saturday is specifically for the\nPacific Coast, where large breaking waves will spill over sea\nwalls and run up beaches onto adjacent infrastructure.",
+                "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.\n\nEveryone should remain out of the water due to life-threatening\nsurf conditions. Stay off of jetties, piers, and other waterside\ninfrastructure.\n\nStay off of jetties, piers, rocks, and other waterside\ninfrastructure. Remain out of the water to avoid hazardous surf\nand NEVER turn your back on the ocean. Monitor local weather,\nsurf and tide forecasts at www.weather.gov/mtr.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "CFWMTR"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS46 KMTR 120648"
+                    ],
+                    "NWSheadline": [
+                        "COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 4 PM PST FRIDAY... ...BEACH HAZARDS STATEMENT REMAINS IN EFFECT THROUGH FRIDAY AFTERNOON... ...HIGH SURF WARNING REMAINS IN EFFECT FROM 6 PM FRIDAY TO 4 AM PST SUNDAY... ...COASTAL FLOOD ADVISORY IN EFFECT FROM MIDNIGHT FRIDAY NIGHT TO 6 PM PST SATURDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KMTR.SU.W.0001.261114T0200Z-261115T1200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-11-15T04:00:00-08:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4b5be439c18dd1d2d8f62b3a64cbb95f0f6a1b66.001.1,2026-11-11T08:08:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3b178227abcba8935da903554eef89daded876da.001.2,2026-11-11T10:17:00-08:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.750f043d2e3232d94baf2bf959b68cf64bfe15dd.001.1,2026-11-11T00:14:00-08:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "SUW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f24acdc8bab05264fb6a2dc1481bf8cf8e0da56e.001.1",
+                "areaDesc": "San Francisco; Southern Monterey Bay and Big Sur Coast",
+                "geocode": {
+                    "SAME": [
+                        "006075",
+                        "006053"
+                    ],
+                    "UGC": [
+                        "CAZ006",
+                        "CAZ530"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ006",
+                    "https://api.weather.gov/zones/forecast/CAZ530"
+                ],
+                "references": [],
+                "sent": "2026-11-11T22:48:00-08:00",
+                "effective": "2026-11-11T22:48:00-08:00",
+                "onset": "2026-11-14T00:00:00-08:00",
+                "expires": "2026-11-12T15:00:00-08:00",
+                "ends": "2026-11-14T18:00:00-08:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Minor",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Coastal Flood Advisory",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Francisco CA",
+                "headline": "Coastal Flood Advisory issued November 11 at 10:48PM PST until November 14 at 6:00PM PST by NWS San Francisco CA",
+                "description": "* WHAT...For the first Coastal Flood Advisory, Up to 1.5 ft of\ninundation above ground level is possible in low-lying areas\nnear shorelines and tidal waterways. For the Beach Hazards\nStatement, An increased risk for sneaker waves and strong rip\ncurrents with breaking waves of 15 to 20 ft expected. For the\nHigh Surf Warning, Dangerously large breaking waves of 25 to 35\nft, with occasional sets of 40 to 50 ft at favored breakpoints.\nFor the second Coastal Flood Advisory, large breaking waves will\nrun up beaches and crash over seawalls, inundating adjacent,\nlow-lying infrastructure.\n\n* WHERE...San Francisco and Southern Monterey Bay and Big Sur\nCoast.\n\n* WHEN...For the first Coastal Flood Advisory, until 4 PM PST\nFriday. For the Beach Hazards Statement, through Friday\nafternoon. For the High Surf Warning, from 6 PM Friday to 4 AM\nPST Sunday. For the second Coastal Flood Advisory, from\nmidnight Friday night to 6 PM PST Saturday.\n\n* IMPACTS...High tides will result in flooding of low-lying\ninfrastructure, isolated road closures, and coastal erosion.\nRising tides will bring water and waves farther up the beach\nthan normal, restricting escape from beaches and coastal\nareas. Dangerously large breaking waves can overpower\nswimmers, pulling people into the sea from beaches, jetties,\nand rocks resulting in significant physical injury and\nincreasing the risk of drowning. Waves can sweep across the\nshoreline without warning, pulling people into the sea from\nbeaches, jetties, and rocks.\n\n* ADDITIONAL DETAILS...At the San Francisco tide gauge, high tide\nis expected to be: 1.3 ft above normal (7.1 ft MLLW) at 12:10 PM\nThursday 11/12, 1.5 ft above normal (7.3 ft MLLW) at 12:49 PM\nFriday 11/13. These predictions include up to 1.8 ft of surge\nthat will enhance the astronomical tide and flooding threat.\nHigh tide varies up to 90 minutes earlier or later along the\nPacific Coast and through the San Francisco Bay, respectively.\nThe Coastal Flood Advisory on Saturday is specifically for the\nPacific Coast, where large breaking waves will spill over sea\nwalls and run up beaches onto adjacent infrastructure.",
+                "instruction": "If travel is required, allow extra time as some roads may be\nclosed. Do not drive around barricades or through water of\nunknown depth. Take the necessary actions to protect flood-prone\nproperty.\n\nEveryone should remain out of the water due to life-threatening\nsurf conditions. Stay off of jetties, piers, and other waterside\ninfrastructure.\n\nStay off of jetties, piers, rocks, and other waterside\ninfrastructure. Remain out of the water to avoid hazardous surf\nand NEVER turn your back on the ocean. Monitor local weather,\nsurf and tide forecasts at www.weather.gov/mtr.",
+                "response": "Monitor",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "CFWMTR"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS46 KMTR 120648"
+                    ],
+                    "NWSheadline": [
+                        "COASTAL FLOOD ADVISORY REMAINS IN EFFECT UNTIL 4 PM PST FRIDAY... ...BEACH HAZARDS STATEMENT REMAINS IN EFFECT THROUGH FRIDAY AFTERNOON... ...HIGH SURF WARNING REMAINS IN EFFECT FROM 6 PM FRIDAY TO 4 AM PST SUNDAY... ...COASTAL FLOOD ADVISORY IN EFFECT FROM MIDNIGHT FRIDAY NIGHT TO 6 PM PST SATURDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KMTR.CF.Y.0016.261114T0800Z-261115T0200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-11-14T18:00:00-08:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "CFY"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories for 37.76 N, 122.51 W",
+    "updated": "2026-11-12T08:25:08+00:00"
+}
