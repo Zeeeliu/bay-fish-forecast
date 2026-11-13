@@ -8,6 +8,7 @@
 #include "model.h"
 #include "parse.h"
 #include "tz.h"
+#include "validate.h"
 
 using namespace core;
 
@@ -229,6 +230,23 @@ void test_english_landing() {   // PRD D11: English option for the landing page
   TEST_ASSERT_EQUAL_STRING("海滩危险声明", place(r, "halfmoon").alerts.items[0].nameZh.c_str());
 }
 
+static void test_validate_bodies() {
+  // every real capture is accepted
+  for (auto [k, f] : {std::pair{"S1_sf", "nws_alerts_point_sf_2026-11-12.json"}, {"S2_PZZ545", "nws_alerts_zone_PZZ545_2026-11-12.json"},
+                      {"S3_sf", "openmeteo_forecast_sf_2026-11-12.json"}, {"S4_sf", "openmeteo_marine_sf_2026-11-12.json"},
+                      {"S5_9414290", "coops_hilo_9414290_20261111-20261117.json"}, {"S6_46026", "ndbc_latest_obs_46026_2026-11-12.txt"},
+                      {"S7_9414750", "coops_watertemp_9414750_latest.json"}, {"S8_PZZ545", "nws_marine_PZZ545_2026-11-12.json"}})
+    TEST_ASSERT_TRUE_MESSAGE(validBody(k, load(f)), k);
+  // HTTP 200 with nulls (seen 2026-11-12 from a degraded Open-Meteo server) must not replace a good cache
+  std::string nulls = R"({"daily":{"time":["2026-11-12","2026-11-13","2026-11-14","2026-11-15","2026-11-16","2026-11-17"],)"
+                      R"("temperature_2m_max":[null,null,null,null,null,null],"temperature_2m_min":[null,null,null,null,null,null]}})";
+  TEST_ASSERT_FALSE(validBody("S3_sf", nulls));
+  TEST_ASSERT_FALSE(validBody("S3_sf", "<html>502 Bad Gateway</html>"));
+  TEST_ASSERT_FALSE(validBody("S5_9414290", R"({"error":{"message":"No Predictions data was found."}})"));
+  TEST_ASSERT_FALSE(validBody("S8_PZZ545", "{}"));
+  TEST_ASSERT_FALSE(validBody("S1_sf", ""));
+}
+
 int main(int, char**) {
   UNITY_BEGIN();
   RUN_TEST(test_tz);
@@ -246,5 +264,6 @@ int main(int, char**) {
   RUN_TEST(test_marine_in_report);
   RUN_TEST(test_fourth_place_without_data);
   RUN_TEST(test_english_landing);
+  RUN_TEST(test_validate_bodies);
   return UNITY_END();
 }

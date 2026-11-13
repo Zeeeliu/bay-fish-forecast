@@ -330,10 +330,12 @@ Report buildReport(const Inputs& in, int64_t now, Lang lang) {
   if (r.forecastStale) r.footerLeft = fcAt ? L("预报数据已过期（上次 " + hhmm(fcAt) + "）", "Forecast out of date (last " + hhmm(fcAt) + ")") : L("暂无预报数据", "No forecast data");
   else r.footerLeft = L("预报更新 " + hhmm(fcAt) + " · 警示检查 " + alertTxt + "（每15分钟）· 下次完整更新 " + hhmm(nextFull),
                         "Forecast " + hhmm(fcAt) + " · Alerts " + alertTxt + " (every 15 min) · Next " + hhmm(nextFull));
-  bool failed = false;
-  for (auto& kv : in.src) if (kv.second.okAt == 0 || !kv.second.lastOk) failed = true;
+  size_t nFailed = 0;
+  for (auto& kv : in.src) if (kv.second.okAt == 0 || !kv.second.lastOk) nFailed++;
+  bool failed = nFailed > 0;
   if (!in.wifiConnected) { r.status = L("未连接 Wi-Fi", "No Wi-Fi"); r.statusError = true; }
   else if (in.refreshing) r.status = L("正在更新…", "Updating…");
+  else if (failed && nFailed < in.src.size()) { r.status = L("部分更新失败 · 显示缓存", "Partly failed · cached"); r.statusError = true; }
   else if (failed) { r.status = L("更新失败 · 显示缓存", "Update failed · cached"); r.statusError = true; }
   else r.status = L("已连接", "Connected");
   return r;

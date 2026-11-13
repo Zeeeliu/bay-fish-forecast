@@ -5,7 +5,7 @@
 #include <vector>
 #include "model.h"
 
-#define FW_VERSION "1.0.0"
+#define FW_VERSION "1.0.1"
 
 struct WifiNet { std::string ssid; int rssi; bool secure; };
 
@@ -22,6 +22,8 @@ struct AppState {
   volatile bool clockValid = false, ntpSynced = false;
   volatile bool debug = false;
   std::string lastError;                            // guarded by mu
+  std::vector<std::string> errorLog;                // guarded by mu; last 12 failures "MM-DD HH:MM key: reason"
+  std::vector<std::string> retryKeys;               // guarded by mu; forecast sources waiting for a catch-up retry
   int64_t lastAlertCycle = 0, lastFullRefresh = 0;
 };
 extern AppState app;

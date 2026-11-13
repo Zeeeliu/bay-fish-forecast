@@ -10,6 +10,8 @@
 #include <algorithm>
 #include "app.h"
 #include "tz.h"
+#include "validate.h"
+#include <map>
 #if __has_include("secrets.h")
 #include "secrets.h"
 #endif
@@ -63,21 +65,40 @@ static bool httpGet(const std::string& url, std::string& body, String& err) {
   return true;
 }
 
-static bool fetchKey(const std::string& key, const std::string& url) {
+// Forecast sources (S3–S8) that failed in a full refresh; retried at every alert cycle (~15 min) until they succeed,
+// instead of waiting for the next 05/12/18 refresh. Alert sources (S1/S2) are refetched every 15 min anyway.
+static std::map<std::string, std::string> retryUrls;
+
+static bool getValid(const std::string& key, const std::string& url, std::string& body, String& err) {
+  if (!httpGet(url, body, err)) return false;
+  if (!core::validBody(key, body)) { err = String("invalid body (") + body.size() + " B)"; return false; }   // keep the good cache
+  return true;
+}
+
+static bool fetchKey(const std::string& key, const std::string& url, bool waitRetry = true) {
   if (otaStarted) ArduinoOTA.handle();   // stay reachable for OTA during long refreshes
   std::string body; String err;
-  bool ok = httpGet(url, body, err);
-  if (!ok) {   // PRD §6.3: one retry after 30 s; keep answering OTA while waiting
+  bool ok = getValid(key, url, body, err);
+  if (!ok && waitRetry) {   // PRD §6.3: one retry after 30 s; keep answering OTA while waiting
     for (int i = 0; i < 300; i++) { if (otaStarted) ArduinoOTA.handle(); delay(100); }
-    ok = httpGet(url, body, err);
+    ok = getValid(key, url, body, err);
   }
+  bool forecastSrc = key.rfind("S1_", 0) != 0 && key.rfind("S2_", 0) != 0;
+  if (forecastSrc) { if (ok) retryUrls.erase(key); else retryUrls[key] = url; }
   core::Fetched snapshot;
   {
     Lock l;
     auto& f = app.inputs.src[key];
     f.lastOk = ok;
     if (ok) { f.body = std::move(body); f.okAt = nowUtc(); }
-    else app.lastError = key + ": " + err.c_str();
+    else {
+      app.lastError = key + ": " + err.c_str();
+      int64_t n = nowUtc();
+      app.errorLog.push_back(core::localDate(n).substr(5) + " " + core::hhmm(n) + " " + app.lastError);
+      if (app.errorLog.size() > 12) app.errorLog.erase(app.errorLog.begin());
+    }
+    app.retryKeys.clear();
+    for (auto& kv : retryUrls) app.retryKeys.push_back(kv.first);
     snapshot = f;
   }
   if (ok) storeSave(key, snapshot);
@@ -98,6 +119,8 @@ static void alertCycle() {
     fetchKey(std::string("S1_") + p.id, "https://api.weather.gov/alerts/active?point=" + ll(p.landLat) + "," + ll(p.landLon));
   for (auto& z : marineZones()) fetchKey("S2_" + z, "https://api.weather.gov/alerts/active?zone=" + z);
   app.lastAlertCycle = nowUtc();
+  auto pending = retryUrls;   // catch-up: one quick attempt each, no 30 s wait
+  for (auto& kv : pending) fetchKey(kv.first, kv.second, false);
 }
 
 static std::string ymd(int64_t utc) { core::LocalTime t = core::toLocal(utc); char b[12]; snprintf(b, sizeof b, "%04d%02d%02d", t.y, t.mo, t.d); return b; }
@@ -105,6 +128,7 @@ static std::string ymd(int64_t utc) { core::LocalTime t = core::toLocal(utc); ch
 static void fullRefresh() {
   { Lock l; app.inputs.refreshing = true; }
   app.dataVersion++;
+  retryUrls.clear();   // everything is fetched again below
   alertCycle();
   for (auto& p : core::places()) {
     fetchKey(std::string("S3_") + p.id, "https://api.open-meteo.com/v1/forecast?latitude=" + ll(p.fcLat) + "&longitude=" + ll(p.fcLon) +
