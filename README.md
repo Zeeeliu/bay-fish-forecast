@@ -101,3 +101,8 @@ docs/       PRD.md (full requirements and decisions), prototype scripts, screens
 Design notes worth knowing: `std::regex` recurses per character and overflows small task stacks, so long NWS text is parsed
 by hand; NDBC `latest_obs` files change shape between reports (key-based parser, GMT time line); Open-Meteo can serve two
 model runs from different servers for a while after an update. See `docs/PRD.md` for everything else.
+
+## License
+
+[MIT](LICENSE). Third-party parts keep their own licenses: Noto Sans SC (SIL OFL 1.1, downloaded at build time, not
+included), M5Unified/M5GFX (MIT), ArduinoJson (MIT). Data: NWS/NOAA (US public domain), Open-Meteo (CC BY 4.0).
