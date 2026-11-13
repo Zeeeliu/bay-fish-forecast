@@ -34,7 +34,9 @@ static void handle(const String& line) {
     d["fw_version"] = FW_VERSION; d["uptime_s"] = millis() / 1000; d["reset_reason"] = resetName(esp_reset_reason());
     d["heap_free"] = ESP.getFreeHeap(); d["psram_free"] = ESP.getFreePsram();
     JsonObject w = d["wifi"].to<JsonObject>();
-    { Lock l; w["ssid"] = app.wifiSsid; w["status"] = app.wifiStatus; d["last_error"] = app.lastError; }
+    { Lock l; w["ssid"] = app.wifiSsid; w["status"] = app.wifiStatus; d["last_error"] = app.lastError;
+      JsonArray el = d["error_log"].to<JsonArray>(); for (auto& e : app.errorLog) el.add(e);
+      JsonArray rk = d["retry_pending"].to<JsonArray>(); for (auto& k : app.retryKeys) rk.add(k); }
     w["connected"] = (bool)app.wifiConnected; w["rssi"] = WiFi.RSSI(); w["ip"] = WiFi.localIP().toString();
     d["clock_valid"] = (bool)app.clockValid; d["ntp_synced"] = (bool)app.ntpSynced;
     d["now"] = core::localDate(nowUtc()) + " " + core::hhmm(nowUtc());

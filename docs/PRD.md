@@ -352,7 +352,7 @@ Reference prototype: `docs/alert_text.py`. It was run on the live 2026-11-11 sto
 | Buoy observation ≥ 3 h old or missing | Wave/water tiles fall back as in §7.4 |
 | No cache and first fetch failed | S3 splash (§9.6) |
 
-Status area (header right): `已连接` (grey) · `正在更新…` (grey) · `更新失败 · 显示缓存` (#F0937A) · `未连接 Wi-Fi` (#F0937A).
+Status area (header right): `已连接` (grey) · `正在更新…` (grey) · `部分更新失败 · 显示缓存` / `更新失败 · 显示缓存` (#F0937A) · `未连接 Wi-Fi` (#F0937A). A forecast source (S3–S8) that fails is retried at every alert cycle (~15 min) until it succeeds; a body that fails `core::validBody()` (e.g. HTTP 200 with null values) counts as a failure and never replaces the cache.
 
 ### 7.7 Rebuilding the Report as time passes
 The Report depends on `now`: in-effect vs upcoming, ended alerts, `今天`, the tide day, staleness. It is therefore **rebuilt from the cached raw responses** (§10.6), not only after fetches. Rebuild:
